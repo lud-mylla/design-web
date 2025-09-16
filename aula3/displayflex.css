@@ -1,0 +1,32 @@
+header, footer{
+    /* a virgula representa um agrupamento de seletores*/
+    background-color: lightblue;
+    padding: 1rem;
+    text-align: center;
+}
+
+main{
+    display:flex;
+    /*permitem que os elementos de section's fiquem um ao lado do outro*/
+    justify-content: center;
+    /**/
+    gap: 1rem;
+
+}
+
+main > section{
+    /*o caractere '>' seleciona o elemento diretamente filho
+    <main>
+         <section> -> elemento selecionado 
+         -- caso tenha sections"s no parentesco "neta", não é selecionado
+
+    
+    */
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid salmon;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.3rem 0.03rem rgb(238, 238, 238);
+    margin:1rem 0;
+
+}
