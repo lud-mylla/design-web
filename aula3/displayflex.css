@@ -26,7 +26,9 @@ main > section{
     padding: 1rem;
     border: 1px solid salmon;
     border-radius: 1rem;
+    /*bordas arredondadas*/
     box-shadow: 0 0 0.3rem 0.03rem rgb(238, 238, 238);
+    /*sombra*/
     margin:1rem 0;
 
 }

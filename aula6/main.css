@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding: 0;
+}
+header, footer, section{
+    padding: 2rem;
+    background-color: lightcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+
+}   
+header, footer{
+    background-color: lightskyblue;
+    text-align: center;
+}
+main{
+    margin-top: 3rem;
+  
+}
+header{
+    position: fixed;
+    /*posicina o elemento sobre a pagina, ATIVA o eixo Z - 
+    sobrepõe os elementos da página
+    Em relação ao comportamento de estilo, o elemento deixa de ser display:block para 
+    ser display: inline-block, isto é, perde a largura
+    */
+    width: 100vw; /*vw: viewport width = largura  do dispositivo*/
+    top:200px;
+    /*COORDENADAS -  escolher no minimo uma e no maximo 2, uma para o eixo x e outra para o eixo y
+    top, left, right*/
+    z-index: 1;
+}
+
+div#esmaecer{
+    width:100vw;
+    height: 100vh; 
+    background-color:rgba(0, 0, 0, 0.7);
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+}
+
+div#modal{
+    z-index: 3;
+    background-color: aqua;
+    padding: 2rem;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    box-shadow: 10px 5px 5px rgb(150, 150, 150);
+    
+    /*não se trabalha com largura/altura min, máx...
+    é importante colocar largura e altura por causa do position*/
+}
+h2{
+    background-color: turquoise;
+    position: relative;
+    top:10px;
+
+}
