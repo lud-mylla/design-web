@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to right, #0f4c75, #3282b8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.menu-lateral {
+  width: 250px;
+  background-color: #c2d3dc;
+  padding: 20px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral li {
+  margin-bottom: 15px;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #004d66;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.sobre button {
+  margin-top: 10px;
+}
+
+.programacao table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.programacao th,
+.programacao td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.inscricao input[type="text"],
+.inscricao input[type="email"],
+.inscricao input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.inscricao button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.inscricao label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.palestrantes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.palestrante {
+  position: relative;
+  width: 150px;
+  text-align: center;
+}
+
+.palestrante img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.palestrante span {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.organizacao ul {
+  padding-left: 20px;
+}
+
+.azul {
+  color: #005b96;
+}
+
+.negrito {
+  font-weight: bold;
+}
