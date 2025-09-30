@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style-type: none;
+}
+ol > li{
+    display:inline;
+    position: relative;
+}
+ol > li > a{
+    /*o ancora é formatado para ocupar uma area maior e assim melhorar a usabilidade*/
+    display: inline-block;
+    padding:1rem ;
+    color:darkcyan;
+    background-color: gainsboro;
+    text-decoration: none;
+}
+li > ul{
+    position: absolute;
+    padding: 1rem;
+    background-color: gainsboro;
+    visibility: hidden;
+    /*atributo com o valor "hidden"  esconde o submenu*/
+    top:20px;
+    left: 0;
+}
+ol >li:hover ul{
+    visibility: visible;
+    /*ao passar o mouse sobre o li que está dentro do ul, formata-se ol*/
+}
