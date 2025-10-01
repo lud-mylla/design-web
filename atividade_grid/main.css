@@ -1,119 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    background: #fff;
+    color: #333;
 }
 
 header {
-  background: linear-gradient(to right, #0f4c75, #3282b8);
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background: linear-gradient(to right, #2f4f60, #547a8c);
+    color: white;
+    padding: 50px;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header span {
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .container {
-  display: flex;
+    display: flex;
 }
 
-.menu-lateral {
-  width: 250px;
-  background-color: #c2d3dc;
-  padding: 20px;
+/* MENU LATERAL */
+.menu {
+    width: 20%;
+    background: #e5eef2;
+    padding: 30px 20px;
+    min-height: 100vh;
 }
 
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
+.menu ul {
+    list-style: none;
 }
 
-.menu-lateral li {
-  margin-bottom: 15px;
+.menu li {
+    margin: 20px 0;
 }
 
-.menu-lateral a {
-  text-decoration: none;
-  font-size: 24px;
-  color: #004d66;
+.menu a {
+    text-decoration: none;
+    color: #497080;
+    font-size: 20px;
 }
 
+/* CONTEÚDO PRINCIPAL */
 .conteudo {
-  flex: 1;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-gap: 20px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.sobre, .programacao, .atividades, .inscricao, .organizacao {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
 }
 
 .sobre button {
-  margin-top: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
 }
 
+/* TABELA */
 .programacao table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.programacao th,
 .programacao td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
-.inscricao input[type="text"],
-.inscricao input[type="email"],
-.inscricao input[type="tel"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+/* FORMULÁRIO */
+.inscricao form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inscricao input, .inscricao button {
+    padding: 8px;
+    border: 1px solid #aaa;
 }
 
 .inscricao button {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
 }
 
-.inscricao label {
-  display: block;
-  margin-bottom: 10px;
-}
-
+/* PALESTRANTES */
 .palestrantes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .palestrante {
-  position: relative;
-  width: 150px;
-  text-align: center;
+    text-align: center;
 }
 
 .palestrante img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+    width: 100%;
+    border-radius: 5px;
 }
 
-.palestrante span {
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
+/* RODAPÉ */
+footer {
+    background: #2f4f60;
+    color: white;
+    text-align: center;
+    padding: 80px;
 }
 
-.organizacao ul {
-  padding-left: 20px;
-}
-
-.azul {
-  color: #005b96;
-}
-
-.negrito {
-  font-weight: bold;
-}

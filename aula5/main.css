@@ -1,0 +1,60 @@
+header{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+
+main{
+    display: grid;
+    /* assim como no display-flex, o grid
+    deve ser definido no conteiner */
+    
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* qtd de valores, equivale a qtd
+    de valores no 'grid-template-ares */
+
+    /* fr é a unidade de fração */
+
+
+    grid-template-rows: 25rem 25em;
+    /* a quant de valores  */ 
+
+    /* cuidado ao definir a altura das linhas pq o conteúdo 
+    pode ser maior q a area disponivel */
+
+    grid-template-areas:
+    "a a d"
+    "b c d";
+    
+    /* R1º preciso colocar todos os filhos do grid */
+    /* R2º nao posso mesclagem diagonal */
+    /* R3º para espaço vazio, usar ponto */
+
+    /* grid-template-areas= desenha a matriz */
+}
+
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    overflow: auto;
+    /* overflow exibe a barra de rolagem se o texto for muito grande para o local */
+}
+
+section.noticias{
+    grid-area: a;/* a definição de variável para cada 
+    area do grid é obrigatória */
+}
+section.comemoracao{
+    grid-area: b;
+}
+section.organizadores{
+    grid-area: c;
+}
+section.corrida{
+    grid-area: d;
+}
