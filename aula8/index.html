@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Inscrições para a aula de campo</h1>
+    <form action="dadosenviados.html">
+        <!--o atributo de action deverá receber o arquivo de programção que processara os dados-->
+        <label for="nome">Nome:</label>
+        <input type="text" id=" nome" placeholder="Nome" required> <br>
+        <label for="email">E-mail:</label>
+        <input type=" email" name="email" id="email"> <br>
+        <label for=" curso">Curso:</label>
+        <select name="curso" id="curso">
+            <!--COMBOBOX 
+            usado quando se tem muitos itens-->
+            <option value="infoweb" selected>INFOWEB</option>
+            <option value="adm">Administração</option>
+            <option value="msi">Manutenção e suporte</option>
+            <option value="mec">Mecânica</option>
+            <option value="geo">Geologia</option>
+            <option value="minera">Mineração</option>
+            <option value="cam">Controle</option>
+        
+
+        </select> <br>
+
+        <label><input type="radio" name="dir" value="diatinf">DIATINF</label>
+        <label><input type="radio" name="dir" value="diacon">DIACON</label>
+        <label><input type="radio" name="dir" value="diaren">DIAREN</label>
+        <label><input type="radio" name="dir" checked value="diac">DIAC</label>
+        <!--quando se usa o componente radio ou checkbox o valor do name tem que ser o mesmo -->
+        <br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" list="cidade-list"> <br>
+        <datalist id="cidade-list">
+            <option value="Natal">
+            <option value="Parnamirim">
+            <option value="Macaíba">
+            <option value="Tibau">
+
+        </datalist>
+        <label for="obs">Observações</label>
+         <textarea name="obs" id="obs" maxlength="1" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eaque tenetur? Ipsum id molestias deserunt dolorum tempore natus fugit voluptates, est, amet ad impedit, veritatis et. Beatae sit odit ratione?</textarea>
+         <!--textarea é um campo que permite texto com parágrafos-->
+         <input type="submit" value="ENVIAR">
+
+         <!--<button type="submit">ENVIAR/button>-->
+    </form>
+</body>
+</html>

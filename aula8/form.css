@@ -1,0 +1,8 @@
+label[for]{
+    /*seleciona apenas as labels*/
+    display: inline-block;
+    width:12rem;
+    /* a marcação de label não permite a definição de largura, poque ela tem um comportamento de display inline, por isso é necessario definir display com valor inline block*/
+    vertical-align:top;
+    /*o atributo de vertical inline deixa o bloco alinhado horizontalmente*/
+}
