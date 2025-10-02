@@ -1,180 +1,106 @@
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-body {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "header header"
-    "sidebar main"
-    "footer footer";
-  min-height: 100vh;
+body{
   background: #fff;
+    color: #333;
 }
-
-/* ===== HEADER ===== */
-header {
-  grid-area: header;
-  background: linear-gradient(to right, #2d4b5e, #6c91a1);
-  color: white;
-  padding: 15px 25px;
+header{
+  background: linear-gradient(to right, #2f4f60, #547a8c);
+    color: white;
+    padding: 50px;
+    text-align: left;
 }
 
 header h1 {
-  font-size: 22px;
-  margin-bottom: 3px;
+    font-size: 28px;
 }
 
-header p {
-  font-size: 15px;
-}
-
-/* ===== SIDEBAR ===== */
-nav {
-  grid-area: sidebar;
-  background: #e9eff2;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #416175;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #1a3a50;
-  font-weight: bold;
-}
-
-/* ===== MAIN GRID ===== */
-main {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(150px, auto);
-  gap: 15px;
-  padding: 20px;
-}
-
-/* ===== CARDS ===== */
-.card {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-/* ===== PROGRAMAÇÃO ===== */
-.programacao table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.programacao th, 
-.programacao td {
-  border: 1px solid #aaa;
-  padding: 6px;
-  font-size: 14px;
-  text-align: left;
-}
-
-/* ===== FORM INSCRIÇÃO ===== */
-.inscricao input, 
-.inscricao button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.inscricao button {
-  background: #2d4b5e;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.inscricao button:hover {
-  background: #1a3a50;
-}
-
-/* ===== FOTOS PALESTRANTES ===== */
-.foto {
-  position: relative;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.foto img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.foto span {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  text-align: center;
-  padding: 8px 0;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  grid-area: footer;
-  background: #2d4b5e;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-size: 14px;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "header"
-      "sidebar"
-      "main"
-      "footer";
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  nav a {
+header span {
     font-size: 16px;
-  }
+    font-weight: normal;
+}
+.container{
+  display: flex;
+}
+.menu {
+    width: 20%;
+    background: #e5eef2;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+.menu ul {
+    list-style: none;
+}
+.menu li {
+    margin: 20px 0;
+}
+.menu a {
+    text-decoration: none;
+    color: #497080;
+    font-size: 20px;
+}
+.conteudo {
+  width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.sobre, .programacao, .atividades, .inscricao, .organizacao {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+.sobre button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+}
+.programacao table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.programacao td {
+     border: 1px solid #ccc;
+    padding: 5px;
+}
+.inscricao form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inscricao input, .inscricao button {
+    padding: 8px;
+    border: 1px solid #aaa;
+}
+.inscricao button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.palestrantes {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.palestrante {
+   text-align: center;
+}
+.palestrante img {
+    width: 100%;
+    border-radius: 5px;
+}
+footer {
+    background: #2f4f60;
+    color: white;
+    text-align: center;
+    padding: 80px;
 }
