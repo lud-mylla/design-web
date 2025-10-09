@@ -1,0 +1,38 @@
+*{
+    box-sizing:border-box;
+}
+div{
+    text-align: center;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;/*pre*/ 
+    gap: 1rem;
+    justify-content: center;
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    flex-basis: 22%; /**/
+}
+@media (max-width: 1440px){
+    /*mediascreen*/
+
+    body{
+        background-color: rgb(255, 190, 147);
+    }
+    section{
+        flex-basis: 48%;/*permitirá que fique 2 sections por "linha"*/
+    }
+}
+@media (max-width: 744px){
+    /**/
+    body{
+        background-color: rgb(224,255,245);
+
+    }
+    section{
+        flex-basis: 98%; /*permitira que cada section fique em uma linha*/
+    }
+}
