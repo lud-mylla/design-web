@@ -1,1 +1,143 @@
 !
+// ==========================
+// COLA COMPLETA DE JAVASCRIPT
+// ==========================
+
+// 1. VARIÁVEIS E TIPOS
+var idade = 20;         // antiga
+let nome = "Ana";       // moderna
+const PI = 3.14;        // constante
+
+let numero = 10;        // number
+let texto = "Olá";      // string
+let verdadeiro = true;  // boolean
+let lista = [1,2,3];    // array
+let objeto = {nome:"Ana", idade:20}; // objeto
+let vazio = null;       // null
+let indefinido;         // undefined
+
+console.log("Variáveis:", idade, nome, PI, numero, texto, verdadeiro, lista, objeto, vazio, indefinido);
+
+// Comentários
+// Comentário de linha única
+/*
+Comentário de múltiplas linhas
+*/
+
+// ==========================
+// 2. OPERADORES
+// Aritméticos
+console.log("Soma:", 5+3);
+console.log("Subtração:", 5-3);
+console.log("Multiplicação:", 5*3);
+console.log("Divisão:", 5/3);
+console.log("Resto:", 5%3);
+console.log("Exponenciação:", 2**3);
+
+// Comparação
+console.log("==:", 5=="5");   // compara valor
+console.log("===:", 5==="5"); // compara valor e tipo
+
+// Lógicos
+console.log("AND &&:", true && false);
+console.log("OR ||:", true || false);
+console.log("NOT !:", !true);
+
+// Atribuição
+let x = 10;
+x += 5; x -= 2; x *= 2; x /= 3; x %= 3;
+console.log("Atribuição:", x);
+
+// Conversão de tipos
+let strNumero = "100";
+let convertido = Number(strNumero); // string → number
+let paraString = String(123);       // number → string
+console.log("Conversão:", convertido, paraString);
+
+// ==========================
+// 3. CONDICIONAIS
+if(idade >= 18){
+    console.log("Maior de idade");
+} else if(idade >= 13){
+    console.log("Adolescente");
+} else{
+    console.log("Criança");
+}
+
+// Ternário
+let status = idade >= 18 ? "Adulto" : "Menor";
+console.log("Status:", status);
+
+// ==========================
+// 4. FUNÇÕES
+// Tradicional
+function soma(a,b){ return a+b; }
+
+// Arrow function
+const multiplica = (a,b) => a*b;
+
+// Parâmetro default
+function saudacao(nome="Visitante"){
+    console.log("Olá", nome);
+}
+
+// Rest parameters
+function somaTudo(...nums){
+    let total=0;
+    for(let n of nums) total+=n;
+    return total;
+}
+
+// Chamadas de função
+console.log("Soma:", soma(5,3));
+console.log("Multiplicação:", multiplica(5,3));
+saudacao();             // Olá Visitante
+saudacao("Maria");      // Olá Maria
+console.log("Soma Tudo:", somaTudo(1,2,3,4,5));
+
+// ==========================
+// 5. ARRAYS
+let frutas = ["Maçã","Banana","Laranja"];
+let numeros = [1,2,3,4,5];
+
+// Acessando elementos
+console.log("Primeira fruta:", frutas[0]);
+console.log("Terceiro número:", numeros[2]);
+
+// Modificando elementos
+frutas[1] = "Morango";   // substitui Banana
+frutas.push("Uva");      // adiciona
+frutas.pop();            // remove último
+console.log("Array frutas:", frutas);
+console.log("Tamanho do array:", frutas.length);
+
+// ==========================
+// 6. LOOPS
+
+// --- FOR
+console.log("---- FOR ----");
+for(let i=0; i<frutas.length; i++){
+    console.log(frutas[i]);
+}
+
+// --- FOR..OF
+console.log("---- FOR..OF ----");
+for(let fruta of frutas){
+    console.log(fruta);
+}
+
+// --- WHILE
+console.log("---- WHILE ----");
+let i2 = 0;
+while(i2 < numeros.length){
+    console.log(numeros[i2]);
+    i2++;
+}
+
+// --- DO..WHILE
+console.log("---- DO..WHILE ----");
+let j = 0;
+do{
+    console.log(numeros[j]);
+    j++;
+} while(j < numeros.length);
