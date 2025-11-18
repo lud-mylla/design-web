@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Botões Coloridos</title>
+
+<style>
+    body{
+        text-align: center;
+        padding: 140px;
+    }
+
+    button{
+       width: 6rem;
+       height: 6rem;
+       border: 1px solid white;
+       border-radius: 100%;
+      
+    }
+</style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+
+function planoDeFundoBody(r, g, b) {
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+
+for(let i = 0; i < 100; i++){
+
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    let botao = document.createElement("button");
+
+    botao.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    botao.onclick = function(){ 
+        planoDeFundoBody(r, g, b); 
+    }
+    document.getElementById("container").appendChild(botao);
+}
+
+</script>
+
+</body>
+</html>
+ 

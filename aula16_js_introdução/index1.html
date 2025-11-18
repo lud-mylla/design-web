@@ -1,1 +1,82 @@
-dfe
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - Funções</title>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reprehenderit, sunt vitae voluptate magni ipsum quae. Adipisci, sed sit cum odio dicta sapiente, possimus facere nam aperiam ad non architecto.</p>
+    <input type="color" id="cor">
+    <button id="mudacor" onclick="mudarcor()">MUDAR COR</button>
+    <!-- <button id="btn"">MUDAR COR 2</button> -->
+    <button id="borda2"">MUDAR BORDA</button>
+
+    <script>
+
+        // let btn= document.getElementById("btn")
+        // btn.addEventListener("click", function (e) {
+        //     let cor = document.getElementById("cor").value;
+        //     document.borda.style.backgroundColor = cor;
+
+        // });
+        
+        let borda2= document.getElementById("borda2")
+        borda2.addEventListener("click", function (e) {
+            let cor = document.getElementById("cor").value;
+            document.getElementById("texto").style.border = `2rem solid ${cor}`;
+
+        });
+
+
+        function mudarcor(){
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        }
+
+
+        function somar(){
+            return 3+8;
+        }
+        console.log(somar());
+        console.log(somar());
+        console.log(somar());
+
+        function somar2(num1, num2){
+            return num1+num2;
+        }
+        function somar3(num1,num2,num3){
+            return num1+num2+num3;
+        }
+        console.log(somar3(5,8,9));
+
+        function somar4(num1, num2){
+            if(!isNaN(num1) && !isNaN(num2)){
+                //isNaN: Verifica se é um número,
+                //!: verifica se é verdadeiro ou falso
+                //&&: verifica se os dois são verdadeiros
+                return num+num2;
+            }else return "Colocar parâmetro numérico"
+        }
+        console.log(somar4(5, 'teste'))
+
+        function somar5(num1=0,num2=0){
+            //
+            return num1+num2;
+        }
+        console.log(somar5(7));
+
+        function borda(nome, borda){
+            document.body.style.borderWidth = borda+'rem';
+            document.body.style.borderStyle='solid';
+            document.body.style.borderColor=nome;
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        }
+        borda("green",2);
+
+
+    </script>
+    
+</body>
+</html>
