@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Nomes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Página que mostra uma lista de nomes e um formulário para incluir mais um nome</h2>
+
+    <div class="box">
+        <label for="nomeInput">Nome:</label>
+        <input type="text" id="nomeInput">
+        <button id="btnAdd">Adicionar</button>
+    </div>
+
+    <p id="lista"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    background-color: #c4e3f3;
+    padding: 10px;
+}
+
+.box {
+    background-color: #2d4f2d;
+    padding: 10px;
+    width: 330px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 150px;
+}
+
+#lista {
+    font-size: 18px;
+    margin-top: 10px;
+}
+// PASSO 2 JS: Criar lista inicial
+let lista = ["Maria", "José", "Dani", "Caio"];
+
+// Função que exibe a lista na tela
+function exibirLista() {
+    let areaLista = document.getElementById("lista");
+    areaLista.innerHTML = "";  
+
+    for (let i = 0; i < lista.length; i++) {
+        areaLista.innerHTML += lista[i] + "<br>";
+    }
+}
+
+// Chamar a função quando a página abrir
+exibirLista();
+
+// PASSO 4 JS: adicionar evento ao botão
+document.getElementById("btnAdd").addEventListener("click", function () {
+    let novoNome = document.getElementById("nomeInput").value;
+
+    if (novoNome.trim() !== "") {
+        lista.push(novoNome);
+        exibirLista();
+        document.getElementById("nomeInput").value = "";
+    }
+});
