@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .destaque{
+            background-color: blue;
+            font-size: 2rem;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="paragrafocomid">DOM-MODELO DE OBJETO DE DOCUMENTO</p>
+    <span>SPAN1</span>
+    <p class="paragrafoscomclass">DOM-MODELO DE DOCUMENTO <span>SPAN2</span></p>
+
+<!--atribuos personalizados - existe um refixo que é usado para atributos personalizados "data"-
+atributos personalizados
+-->   
+<ol quantidade="8" data-produtos="10">
+   <li>item</li>
+   <li>item</li>
+   <li>item</li>
+   <li>item</li>
+</ol>
+
+<figure>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY2eRzCQV34akYjhQcUpZYOgK6zpYGPlfmOg&s" width  alt="">
+</figure>
+<button class="trocarimagem">Trocar imagem</button>
+
+<script>
+    const pcomid = document.getElementById("paragrafocomid");
+    const pcomclass = document.querySelector("p span");
+    pcomclass.innerHTML = "<b>NOVO</b> texto para o span.";
+
+    document.querySelector(".paragrafoscomclass").classList.add("destaque");
+    //adiciona o valor "destaque" ao atributo class
+    //o atributo class pode receber vários 
+ 
+    document.getElementsByTagName("li")[1].style.color = "green";
+    console.log(document.getElementsByTagName("li").length);
+
+    const imagem = document.querySelector("img");
+
+    console.log(imagem.getAttribute("src"));
+    console.log(imagem.getAttribute("width"));
+
+
+    const trocarimagem = document.querySelector(".trocarimagem");
+    function trocar(){
+        imagem.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-V8S-b8QaLL2o2yZjkxFXqGPkmtmzsjie7Q&s");
+    };
+    trocarimagem.addEventListener("click", trocar);
+
+    const lista = document.queryselector("ol");
+    console.log(lista.getAttribute("quantidade"));
+    console.log(lista.hasAttribute("quantidade"));
+    lista.removeAttribute("quantidade")
+    console.log(lista.hasAttribute("quantidade"));
+
+
+    console.log(lista.dataset.produtos);// vai pegar o valor de um atributo personalizado  - o dataset pega o valorPÓS O PREFIXO "DATA"
+    console.log(lista.dataset.produtos);// verifica se o atributo existe
+
+
+</script>
+</body>
+</html>
+
+
+
